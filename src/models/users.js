@@ -9,21 +9,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Users.hasMany(models.Orders, { foreignKey: "userId" });
     }
   }
   Users.init(
     {
       firstname: DataTypes.STRING,
       lastname: DataTypes.STRING,
-      role: DataTypes.STRING,
+      role: DataTypes.ENUM("admin", "seller", "cashier"),
       email: DataTypes.STRING,
       password: DataTypes.STRING,
       avatar: DataTypes.STRING,
     },
     {
       sequelize,
-      modelName: "users",
+      modelName: "Users",
     }
   );
-  return users;
+  return Users;
 };
