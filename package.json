@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "createDB": "npx sequelize db:create"
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "createDB": "npx sequelize db:create",
+    "dropDB": "npx sequelize db:drop",
+    "migrateAll": "npx sequelize-cli db:migrate",
+    "undoMigrateAll": "npx sequelize-cli db:migrate:undo:all"
   },
   "keywords": [],
   "author": "Osiris Contreras",
@@ -16,5 +21,8 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.32.0",
     "sequelize-cli": "^6.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

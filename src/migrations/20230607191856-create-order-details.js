@@ -1,4 +1,5 @@
 "use strict";
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -13,11 +14,19 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         field: "order_id",
+        references: {
+          model: "orders",
+          key: "id",
+        },
       },
       productId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         field: "product_id",
+        references: {
+          model: "products",
+          key: "id",
+        },
       },
       quantity: {
         type: Sequelize.INTEGER,
@@ -26,6 +35,14 @@ module.exports = {
       price: {
         type: Sequelize.REAL,
         allowNull: false,
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
       },
     });
   },
