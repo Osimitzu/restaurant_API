@@ -25,17 +25,16 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: true,
       },
-      productImage: {
+      product_image: {
         type: Sequelize.STRING,
         allowNull: false,
-        field: "product_image",
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
     });

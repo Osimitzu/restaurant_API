@@ -10,19 +10,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      tableId: {
+      table_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        field: "table_id",
         references: {
           model: "tables",
           key: "id",
         },
       },
-      userId: {
+      user_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        field: "user_id",
         references: {
           model: "users",
           key: "id",
@@ -37,11 +35,11 @@ module.exports = {
         defaultValue: 0.0,
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
     });

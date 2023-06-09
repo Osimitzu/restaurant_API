@@ -9,15 +9,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      orders.belongsTo(models.users, { foreignKey: "userId" });
-      orders.belongsTo(models.tables, { foreignKey: "tableId" });
-      orders.hasMany(models.order_details, { foreignKey: "orderId" });
+      orders.belongsTo(models.users, { foreignKey: "user_id" });
+      orders.belongsTo(models.tables, { foreignKey: "table_id" });
+      orders.hasMany(models.order_details, { foreignKey: "order_id" });
     }
   }
   orders.init(
     {
-      tableId: DataTypes.INTEGER,
-      userId: DataTypes.INTEGER,
+      table_id: DataTypes.INTEGER,
+      user_id: DataTypes.INTEGER,
       status: DataTypes.BOOLEAN,
       total: DataTypes.REAL,
     },

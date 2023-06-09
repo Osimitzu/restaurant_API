@@ -4,6 +4,15 @@
 
 Vamos a omitir el envio de correos y las validaciones.
 
+## Levantar una orden de compra
+
+Una orden esta relacionada con una mesa
+Una orden esta relacionada con un usuario (mesero)
+
+Al crear la orden de compra viene vacia
+
+## Agregar productos a la orden
+
 -->----------------------------------------------------------------------------<--
 -->----------------------------------------------------------------------------<--
 -->----------------------------------------------------------------------------<--
