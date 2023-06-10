@@ -5,6 +5,17 @@ const createOrder = async (data) => {
   return order;
 };
 
+const updateTotal = async (price, id) => {
+  const order = await orders.increment(
+    { total: price },
+    {
+      where: { id },
+    }
+  );
+  return order;
+};
+
 module.exports = {
   createOrder,
+  updateTotal,
 };

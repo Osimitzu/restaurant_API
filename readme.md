@@ -35,3 +35,6 @@ programación estructurada --> Lenguajes como C
 programación funcional --> js / react (su funcionalidad se enfoca en "funciones")
 programación orientada a objetos POO --> js, C#, C++, Java, python, php
 el mas feo para POO es JS
+
+_Para crear la mesa directamente en psql_
+INSERT INTO tables (capacity, "createdAt", "updatedAt") VALUES (4, NOW()::timestamp, NOW()::timestamp);
